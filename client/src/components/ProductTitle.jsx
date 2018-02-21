@@ -55,10 +55,16 @@ class ProductTitle extends React.Component {
       Id: <input onChange={this.updateId} value={this.state.id}></input>
     <button onClick={this.add}>Add Id</button>
       <br />
-      Model: <input onChange={this.updateModel} value={this.state.model}></input>
-    <button onClick={this.add}>Add Model</button>
+      Quantity: <input onChange={this.updateQuantity} value={this.state.quantity}></input>
+    <button onClick={this.add}>Add Quantity</button>
+     <br />
+     Price: <input onChange={this.updatePrice} value={this.state.price}></input>
+   <button onClick={this.add}>Add Price</button>
+   <br />
+   Picture: <input onChange={this.updatePicture} value={this.state.picture}></input>
+ <button onClick={this.add}>Add Picture</button>
     </div>);
   }
 }
 
-export default AddMakeModel;
+export default ProductTitle;
