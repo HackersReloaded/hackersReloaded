@@ -70,6 +70,27 @@ app.get('/products', (req, res) => {
 });
 
 
+app.post('/products', (req, res) =>{
+
+	// console.log(req.body);
+	let tmpBody = req.body;
+
+
+	dbx.insertItem(req.body, function(datax){
+    // console.log(dastax);
+    // var mydata = JSON.stringify(datax);
+    console.log(" Object inserted into db: ");
+    // res.send(' Object inserted into db: ' + tmpBody);
+    res.send(' Object inserted into db: ' + datax);
+
+    // res.send(mydata);
+    res.end();
+    })
+
+
+});
+
+
 app.listen(PORT, () => {
 	console.log('listening on port ' + PORT);
 	// console.log(`listening on port ${PORT}`);

@@ -32,7 +32,7 @@ const getAllItems = function(callback) {
 
 const getItem = function(itemx, callback) {
 
-	console.log(" simple query: ");
+	// console.log(" simple query: ");
 	MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("forbes");
@@ -51,6 +51,32 @@ const getItem = function(itemx, callback) {
 
 };
 
+
+const insertItem = function(itemx, callback) {
+
+	console.log(" insertItem: ");
+
+
+	MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("forbes");
+  // var myobj = { name: "Company Inc", address: "Highway 37" };
+  // var myobj = { id: 2, item: "drill", description: "This is a great", quantity: 30, price: "18.50", image:"images/drill1.jpg" };
+  var myobj = { id: 3, item: "hammer", description: "This is a great", quantity: 30, price: "18.50", image:"images/drill1.jpg" };
+
+  dbo.collection("customerx").insertOne(itemx, function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+
+    callback(itemx);
+
+    db.close();
+   });
+  });
+
+
+};
+
 module.exports = {
-  getAllItems, getItem
+  getAllItems, getItem, insertItem
 };
