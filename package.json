@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/Cesar88Tapia/hackersReloaded#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
     "react": "^16.2.0",
+    "react-dev": "0.0.1",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
