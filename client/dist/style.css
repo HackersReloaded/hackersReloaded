@@ -15,7 +15,7 @@ h1 {
 input {
   width: 10%;
   position: absolute;
-  right: 100px;
+  right: 50px;
   top: 50px;
 }
 
@@ -23,6 +23,11 @@ button {
   width: 55px;
   height: 22px;
   position: absolute;
-  right: 225px;
+  right: 175px;
+  top: 50px;
+}
+
+img {
+  position: absolute;
   top: 50px;
 }
