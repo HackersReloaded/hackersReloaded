@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import data from './data.js';
 import $ from 'jquery';
 import ProductList from './components/ProductList.jsx';
 import ProductInfo from './components/ProductInfo.jsx';
