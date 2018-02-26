@@ -11,7 +11,7 @@ class App extends React.Component {
   }
   render() {
     var user = {
-      id: "ID:",
+      id: "",
       quantity: "Quantity:",
       description: "Description:",
       price: "Price:",
@@ -26,9 +26,9 @@ class App extends React.Component {
           </Header>
         </div>
       </div>
-      <div className="row">
+      <div className="col-xs-20 col -xs-offset-5">
         <div className="col-xs-20 col -xs-offset-5">
-          <Home initalId={user.id} quantity={user.quantity} description={user.description} price={user.price} picture={user.picture} tools={user.tools} greet={this.onGreet}/>
+          <Home id={user.id} quantity={user.quantity} description={user.description} price={user.price} picture={user.picture} tools={user.tools} greet={this.onGreet}/>
         </div>
       </div>
       <div className="row">
