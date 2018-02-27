@@ -19,6 +19,8 @@ import React from "react";
      this.setState({
        id: this.state.id +10
      });
+
+     console.log(this.state.id)
    }
   render() {
 
