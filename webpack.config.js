@@ -3,7 +3,8 @@ var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
-  entry: `${SRC_DIR}/index.jsx`,
+
+  entry: `${SRC_DIR}/index.js`,
   output: {
     filename: 'bundle.js',
     path: DIST_DIR
@@ -11,7 +12,8 @@ module.exports = {
   module : {
     loaders : [
       {
-        test : /\.jsx?/,
+        test : /\.js?/,
+
         include : SRC_DIR,
         loader : 'babel-loader',
         query: {

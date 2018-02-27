@@ -4,28 +4,24 @@
   "description": "hackersReloaded",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -d --watch",
     "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cesar88Tapia/hackersReloaded.git"
+    "url": "git+https://github.com/Lalolalo85/hackersReloaded.git"
   },
-  "author": "Cesar, Luis",
+  "author": "Luis,Ceasar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cesar88Tapia/hackersReloaded/issues"
+    "url": "https://github.com/Lalolalo85/hackersReloaded/issues"
   },
-  "homepage": "https://github.com/Cesar88Tapia/hackersReloaded#readme",
+  "homepage": "https://github.com/Lalolalo85/hackersReloaded#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
     "react": "^16.2.0",
-    "react-dev": "0.0.1",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
