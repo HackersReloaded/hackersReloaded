@@ -3,7 +3,7 @@
   word-spacing: 10px;
   font-style: italic;
   text-shadow: 3px 3px;
-  top: 50px;
+  top: 100px;
 }
 
 #m-tools {
@@ -53,6 +53,6 @@
 body {
   background: url(bcklogo.png);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat
   background-size: 1500px, 1000px;
 }

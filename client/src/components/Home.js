@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
  class Home extends React.Component {
    constructor(props) {
@@ -20,7 +20,7 @@ import React from "react";
        id: this.state.id +10
      });
 
-     console.log(this.state.id)
+     console.log(this.state)
    }
   render() {
 
