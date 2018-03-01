@@ -1,18 +1,19 @@
 import React from "react";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <nav className="navbar navbar-default">
       <div className="container">
-        <div className="navbar-header">
-          <ul className="nav navbar-nav">
-            <h1 id="m-header">{this.props.header}</h1>
-            <hr/> {this.props.children}
-          </ul>
-        </div>
+          <div className="row">
+          <div className="col-xs-10 col-xs-offset-1"></div>
+            <img id="Logo" src="HackersReloaded.jpeg"></img>
+          </div>
+          <h1 id="Title">One Stop Hardware</h1>
       </div>
-    </nav>);
+    )
   }
 }
 export default Header;

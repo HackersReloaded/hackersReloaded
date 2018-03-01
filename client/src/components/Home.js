@@ -1,4 +1,5 @@
-/*import React from "react";
+import React from "react";
+import { Image } from 'react-bootstrap';
 
  class Home extends React.Component {
    constructor(props) {
@@ -27,7 +28,7 @@
     return (
       <div>
          <h2 id="m-tools">{this.props.tools}</h2>
-         <img id="m-image" src="Tools.jpg"/>
+         <img src="Tools.jpg"/>
          <p id="headertest">{this.state.id}</p>
          <p>Status: {this.state.status}</p>
          <br/>

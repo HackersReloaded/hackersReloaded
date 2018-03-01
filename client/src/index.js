@@ -21,9 +21,7 @@ class App extends React.Component {
     return (<div className="container">
       <div className="row">
         <div className="col-xs-20 col -xs-offset-5">
-          <Header header={"OneStopHardware"}>
-            <h1 id="m-Text">The Only Place to Shop for your Favorite Tools!</h1>
-          </Header>
+          <Header header={"OneStopHardware"}/>
         </div>
       </div>
     </div>);
