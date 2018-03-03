@@ -10,6 +10,7 @@ class Search extends React.Component {
   }
 
   handleInputChange(e) {
+    //this.props.handleInputChange(e, target, value);
     this.setState({
       value: e.target.value
     });
