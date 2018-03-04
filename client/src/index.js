@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DummieData from './database/dummie.data.js';
+// import DummieData from './database/dummie.data.js';
 import $ from 'jquery';
 import Home from './components/Home.js';
 
@@ -29,7 +29,7 @@ class App extends React.Component {
 
     return (<div className="container">
         <div className="row">
-          {list.map(item =>
+
             <Home item={this.state.list}/>)}
         </div>
       </div>)
