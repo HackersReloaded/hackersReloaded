@@ -1,42 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Header from './components/Header.js';
+import DummieData from './database/dummie.data.js';
+import $ from 'jquery';
 import Home from './components/Home.js';
-import Details from './components/Details.js';
 
 class App extends React.Component {
-  onGreet() {
-    alert("Welcome to the magical place of Tools!");
-  }
+   constructor(props) {
+     super(props);
+     this.state = {
+       list: []
+     }
+     this.getTools = this.getTools.bind(this);
+   }
+
+   getTools(){
+     $.ajax({
+       url:'/',
+       method: 'GET',
+       success: (results) => {
+         this.setState({list:results});
+       },
+       error: (xhr, err) => {
+         console.log('err', err);
+       }
+     })
+   }
   render() {
-    var user = {
-      id: "",
-      quantity: "Quantity:",
-      description: "Description:",
-      price: "Price:",
-      picture: "Picture:",
-      tools: "Tools:"
-    };
+
     return (<div className="container">
-      <div className="row">
-        <div className="col-xs-20 col -xs-offset-5">
-          <Header header={"OneStopHardware"}>
-            <h1 id="m-Text">The Only Place to Shop for your Favorate Tools!</h1>
-          </Header>
+        <div className="row">
+          {list.map(item =>
+            <Home item={this.state.list}/>)}
         </div>
-      </div>
-      <div className="col-xs-20 col -xs-offset-5">
-        <div className="col-xs-20 col -xs-offset-5">
-          <Home id={user.id} quantity={user.quantity} description={user.description} price={user.price} picture={user.picture} tools={user.tools} greet={this.onGreet}/>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-20 col -xs-offset-5">
-          <Details id={user.id} quantity={user.quantity} description={user.description} price={user.price} picture={user.picture} tools={user.tools}/>
-        </div>
-      </div>
-    </div>);
-  }
-}
-ReactDOM.render(<App/>, document.getElementById("app"));
+      </div>)
+
+   }
+};
+ReactDOM.render(<App />, document.getElementById("app"));
