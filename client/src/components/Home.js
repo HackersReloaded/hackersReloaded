@@ -16,23 +16,33 @@ class Home extends React.Component {
   }
 
   render() {
-    return (<div className="card">
+    return (
+      <div>
+      <div>
+         {props.item.map((itemx)=>(
+      <div className="card">
           <div className="card text-white bg-success mb-3" style={{width: "18rem"}}>
             <img className="card-img-top" src="Toolkits.jpeg" alt="Card image cap"></img>
-              <p className="card-text">{"Name: " + this.props.tool.name}</p>
+              <p className="card-text">{"Name: " + itemx.name}</p>
           </div>
           <div className="card-body">
-          <p className="card-text">{"Description: " + this.props.tool.description}</p>
-            <p className="card-text">{"Quantity: " + this.props.tool.quantity}</p>
-            <p className="card-text">{"Price: " + this.state.price}</p>
+          <p className="card-text">{"Description: " + itemx.description}</p>
+            <p className="card-text">{"Quantity: " + itemx.quantity}</p>
+            <p className="card-text">{"Price: " + itemx.price}</p>
             <a href="https://www.homedepot.com/" className="btn btn-primary">More Options!</a>
             <hr />
              <button onClick={() => this.onHotDeals()} className="btn btn-danger">Hot Deals!</button>
         </div>
-      </div>)
+      </div>
+
+
+))}
+</div>
+</div>
+
+)
 
 
   }
 };
 export default Home;
-
